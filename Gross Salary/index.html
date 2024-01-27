@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            padding: 1% 2%;
+            background-color: rgb(219, 249, 175);
+            width: 25%;
+            margin: 5% auto;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        h1 input{
+            width: 45%;
+            height: 25px;
+            margin-top: 10px;
+            outline: none;
+            padding: 0px 8px;
+        }
+        h3{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        button{
+            background-color: rgb(35, 160, 35);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Enter Basic salary : <br> <input type="text" id="basicSalary" placeholder="Enter Basic Salary"></h1>
+
+        <button onclick="salary()">Click here</button>
+        <h3>Base Salary : <span id="baseSalary"></span></h3>
+        <h3>HRA : <span id="HRA"></span></h3>
+        <h3>DA : <span id="DA"></span></h3>
+        <h3>TA : <span id="TA"></span></h3>
+        <h3>Gross Salary : <span id="gross_Salary"></span></h3>
+    </div>
+
+    <script>
+        function salary(){
+            let basic_salary = document.getElementById("basicSalary").value;
+            let hra = parseInt(basic_salary) * 10 / 100;
+            let da = parseInt(basic_salary) * 5 / 100;
+            let ta = parseInt(basic_salary) * 8 / 100;
+            let gross_salary = parseInt(basic_salary) + hra + da + ta;
+
+            document.getElementById("baseSalary").innerHTML = basic_salary;
+            document.getElementById("HRA").innerHTML = hra;
+            document.getElementById("DA").innerHTML = da;
+            document.getElementById("TA").innerHTML = ta;
+            document.getElementById("gross_Salary").innerHTML = gross_salary;
+        }
+    </script>
+</body>
+</html>

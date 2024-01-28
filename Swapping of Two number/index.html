@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        background-color: rgb(204, 162, 123);
+        width: 20%;
+        margin: 10% auto;
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    input{
+        width: 60%;
+        height: 25px;
+        margin-top: 10px;
+        outline: none;
+        padding: 0px 7px;
+    }
+    button{
+        padding: 8px 15px;
+        border-radius: 7px;
+        border: none;
+        background-color: rgb(189, 107, 59);
+        color: white;
+    }
+</style>
+<body>
+
+    <div class="box">
+        <h1>Enter value of a : <input type="text" placeholder="Enter value" id="num1"></h1>
+        <h1>Enter value of b : <input type="text" placeholder="Enter value" id="num2"></h1>
+
+        <button onclick="swap()">Swap</button>
+        <h1>a : <span id="num-a"></span></h1>
+        <h1>b : <span id="num-b"></span></h1>
+    </div>
+
+    <script>
+        function swap(){
+            let a =  document.getElementById("num1").value;
+            let b =  document.getElementById("num2").value;
+
+            document.getElementById("num-a").innerHTML = b;
+            document.getElementById("num-b").innerHTML = a;
+        }
+    </script>
+</body>
+</html>

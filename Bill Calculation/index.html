@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .box{
+        background-color: rgb(72, 184, 184);
+        height: 320px;
+        width: 400px;
+        margin: 10% auto;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;  
+    }
+    input{
+        width: 60px;
+        outline: none;
+        padding: 8px 5px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+    button{
+        padding: 5px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+    p{
+        font-size: 20px;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Bill Calculation</h1>
+        <h3 style="margin-top: 30px;">Enter Price of a Product : <input type="text" id="price"></h3>
+        <h3>Enter quantity of Product : <input type="text" id="quantity"></h3>
+        <h3>Fixed Tax : <span>18%</span></h3>
+        <button onclick="findBill()">Bill</button>
+        <p id="finalResult"></p>
+    </div>
+    <script>
+        function findBill(){
+            let price = document.getElementById("price").value;
+            let quantity = document.getElementById("quantity").value;
+            let totalAmount = price * quantity
+            let taxx = (totalAmount * 18)/100;
+            let result = totalAmount + taxx;
+            document.getElementById("finalResult").innerHTML = "Your Bill is : " + result + " Rs.";
+        }
+    </script>
+</body>
+</html>

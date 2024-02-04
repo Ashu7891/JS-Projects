@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: rgb(244, 180, 60);
+            height: 300px;
+            width: 400px;
+            margin: 13% auto;
+            padding: 10px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+        }
+        h2{
+            margin-top: 30px;
+        }
+        input{
+            outline: none;
+            border-radius: 4px;
+            width: 60px;
+            padding: 8px 5px;
+            border: 1px solid black;
+        }
+        button{
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        p{
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Grade Calculation</h1>
+        <h2>Enter Marks (0-100) : <input type="text" id="marks"></h2>
+        <button onclick="grade()">Click Here</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function grade(){
+           let getMarks = document.getElementById("marks").value;
+           if(getMarks > 100){
+                document.getElementById("result").innerHTML = "Please enter Marks between 0 and 100."
+           }
+           else if(getMarks == 0){
+                document.getElementById("result").innerHTML = "Please enter Marks.";
+           }
+           else if(getMarks >= 90 && getMarks <= 100){
+                document.getElementById("result").innerHTML = "You got A Grade.";
+           }
+           else if(getMarks >= 70 && getMarks <= 89){
+            document.getElementById("result").innerHTML = "You got B Grade";
+           }
+           else if(getMarks >= 50 && getMarks <= 69){
+            document.getElementById("result").innerHTML = "You got C Grade";
+           }
+           else if(getMarks >= 33 && getMarks <= 49){
+            document.getElementById("result").innerHTML = "You got D Grade";
+           }
+           else if(getMarks >= 1 && getMarks <= 32){
+            document.getElementById("result").innerHTML = "You are Failed";
+           }
+        }
+    </script>
+</body>
+</html>

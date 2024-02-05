@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: rgb(225, 136, 101);
+            width: 550px;
+            border-radius: 10px;
+            padding: 10px 25px;
+            margin: 10% auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            font-size: 25px;
+            margin-bottom: 35px;
+        }
+        h2{
+            font-size: 23px;
+        }
+        input{
+            width: 80px;
+            outline: none;
+            padding: 8px 4px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        button{
+            padding: 5px 20px;
+            font-size: 18px;
+            margin-right: 15px;
+            background-color: rgb(242, 105, 84);
+            border-radius: 8px;
+            color: white;
+        }
+        p{
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Grade Calculation using Switch Statement.</h1>
+        <h2>Enter Marks (1-100) : <input type="text" id="marks"></h2>
+        <button onclick="mark()">Click Here</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function mark(){
+            let a = document.getElementById("marks").value;
+            switch (true) {
+                case (a>=90 && a<=100):
+                    document.getElementById("result").innerHTML = "You got A grade.";
+                    break;
+                case (a>=75 && a<=89):
+                    document.getElementById("result").innerHTML = "You got B grade.";
+                    break;
+                case (a>=60 && a<=75):
+                    document.getElementById("result").innerHTML = "You got C grade.";
+                    break;
+                case (a>=40 && a<=59):
+                    document.getElementById("result").innerHTML = "You got D grade.";
+                    break;
+                case (a>=33 && a<=39):
+                    document.getElementById("result").innerHTML = "You got E grade.";
+                    break;
+                case (a>=1 && a<=32):
+                    document.getElementById("result").innerHTML = "You are Failed.";
+                    break;
+                case (a == 0):
+                    document.getElementById("result").innerHTML = "Please Enter any Marks.";
+                    break;
+                case (a>100):
+                    document.getElementById("result").innerHTML = "Please Enter any Marks between 1 and 100.";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

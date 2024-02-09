@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            color: white;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            background-image: url('image/vintage-grunge-blue-concrete-texture-studio-wall-background-with-vignette.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .box{
+            width: 400px;
+            background-color: rgba(0, 0, 0, 0.267);
+            backdrop-filter: blur(5px);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px 25px 20px 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1{
+            margin-bottom: 20px;
+        }
+        label{
+            font-size: 18px;
+            margin-bottom: 6px;
+            margin-left: 2px;
+            float: inline-start;
+        }
+        input{
+            outline: none;
+            padding: 10px 50px 10px 8px;
+            border: 2px solid rgb(146, 146, 146);
+            border-radius: 10px;
+            display: block;
+            margin-top: 5px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.432);
+            color: white;
+            position: relative;
+        }
+        p{
+            font-size: 15px;
+            color: red;
+            margin: 5px 0px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        button{
+            padding: 10px 40px;
+            font-size: 16px;
+            background-color: rgba(0, 0, 0, 0);
+            border-radius: 25px;
+            border: 2px solid rgb(146, 146, 146);
+        }
+        .eye{
+            position: relative;
+        }
+        .eye img{
+            color: black;
+            width: 25px;
+            padding: 4px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            right: 5%;
+            bottom: 10.7%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="index2.html" class="box">
+        <h1>Form Validation</h1>
+        <label for="">Enter Username :</label>
+        <input type="text" placeholder="Username" id="user">
+        <p id="result1"></p>
+        <label for="">Enter Your Email :</label>
+        <input type="text" placeholder="Email" id="email">
+        <p id="result2"></p>
+        <div class="eye">
+            <label for="">Enter Password :</label>
+            <input type="password" id="pwd" placeholder="Password">
+            <img src="close-eye.svg" id="closeEye" onclick="eye()">
+        </div>
+        <p id="result3"></p>
+        <button onclick="return formValidation()">Submit</button>
+    </form>
+    <script>
+        function eye(){
+            if(pwd.type == 'password'){
+                pwd.type = 'text';
+                closeEye.src = 'open-eye.png';
+            }
+            else{
+                pwd.type = 'password';
+                closeEye.src = 'close-eye.svg';
+            }
+        }
+        function formValidation(){
+            let userName = document.getElementById("user").value.trim();
+            let userEmail = document.getElementById("email").value.trim();
+            let userPassword = document.getElementById("pwd").value.trim();
+            let regEmail =  /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{0,9}$/;
+            let specialSymbol = /[!\@\#\$\%\^\&]/;
+
+            if(userName == ""){
+                document.getElementById("result1").innerHTML = "Username can not be blank.";
+                document.getElementById("user").style.borderColor = "red";
+                return false;
+            }
+            else{
+                document.getElementById("result1").innerHTML = "";
+                document.getElementById("user").style.borderColor = "green";
+                true;
+            }
+            if(userEmail == ""){
+                document.getElementById("result2").innerHTML = "Email can not be blank.";
+                document.getElementById("email").style.borderColor = "red";
+                return false;
+            }
+            else if(!userEmail.match(regEmail)){
+                document.getElementById("result2").innerHTML = "You must add @, gmail.com.";
+                document.getElementById("email").style.borderColor = "red";
+                return false;
+           }  
+            else{
+                document.getElementById("result2").innerHTML = "";
+                document.getElementById("email").style.borderColor = "green";
+                true;
+            }
+            if(userPassword == ""){
+                document.getElementById("result3").innerHTML = "Password can not be blank.";
+                document.getElementById("pwd").style.borderColor = "red";
+                return false;
+            }
+            else if(userPassword.length<6 || userPassword.length>10){
+                document.getElementById("result3").innerHTML = "Password must be between 6 and 10 digits.";
+                document.getElementById("pwd").style.borderColor = "red";
+                return false;
+            }
+            else if(!userPassword.match(specialSymbol)){
+                document.getElementById("result3").innerHTML = "Atleast use 1 Symbol (!,@,$).";
+                document.getElementById("pwd").style.borderColor = "red";
+                return false;
+            }
+            else{
+                document.getElementById("result3").innerHTML = "";
+                document.getElementById("pwd").style.borderColor = "green";
+                true;
+            }
+        }
+    </script>
+</body>
+</html>

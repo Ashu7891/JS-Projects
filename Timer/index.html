@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            height: 100px;
+            width: 250px;
+            border-radius: 250px;
+            margin: 18% auto;
+            display: grid;
+            place-items: center;
+            color: white;
+            background-color: rgb(123, 46, 46);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="time"></h1>
+    <script>
+        function count(){
+            let date = new Date();
+            let hrs = date.getHours().toString().padStart("2",0);
+            let mins = date.getMinutes().toString().padStart("2",0);
+            let sec = date.getSeconds().toString().padStart("2",0);
+
+            let totaltime = `${hrs} : ${mins} : ${sec}`;
+            document.getElementById("time").innerHTML = totaltime;
+        }
+        setInterval(count);
+    </script>
+</body>
+</html>

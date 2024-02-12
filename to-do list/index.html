@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list"></ul>
+    <script>
+        let arr = [
+            "mango",
+            "papaya",
+            "lichhi",
+            "guava"
+        ];
+        let listItem = document.getElementById("list");
+        for(let i=0; i<arr.length; i++){
+            let li = document.createElement("li");
+            li.textContent = arr[i];
+            listItem.appendChild(li);
+        }
+    </script>
+</body>
+</html>

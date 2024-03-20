@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="signup" class="form">
+            <h1>Sign Up</h1>
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name">
+                <p id="NameError" class="errors"></p>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Email Address">
+                <p id="EmailError" class="errors"></p>
+            </div>
+            <div class="input-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" placeholder="Country">
+                <p id="CountryError" class="errors"></p>
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone">
+                <p id="PhoneError" class="errors"></p>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password">
+                <p id="PasswordError" class="errors"></p>
+            </div>
+            <button type="submit">Create Account</button>
+        </form>
+        <div id="container2">
+
+        </div>
+    </div>
+    
+</body>
+</html>
+<script src="main.js"></script>

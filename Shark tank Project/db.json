@@ -1,0 +1,146 @@
+{
+  "pitches": [
+    {
+      "id": "16",
+      "image": "https://m.media-amazon.com/images/I/617QlJ62nFL._AC_UL480_FMwebp_QL65_.jpg",
+      "price": "57",
+      "category": "sport",
+      "title": "Paradyes",
+      "founder": "Yushika Jolly",
+      "quantity": 1
+    },
+    {
+      "id": "13",
+      "title": "Falhari",
+      "image": "https://static.wixstatic.com/media/5f24cf_a17220104bb5486d943ad3acd5808e90~mv2.png/v1/fill/w_506,h_314,al_c,q_80,usm_0.66_1.00_0.01/5f24cf_a17220104bb5486d943ad3acd5808e90~mv2.png",
+      "founder": "Rahul Shankar Bhardwaj",
+      "quantity": 1,
+      "category": "Food",
+      "price": "260"
+    },
+    {
+      "id": "44ba",
+      "title": "Food pack for dog",
+      "image": "https://m.media-amazon.com/images/I/716muWbBS5L._SX522_.jpg",
+      "category": "Food",
+      "founder": "Atul",
+      "quantity": 1,
+      "price": "50"
+    },
+    {
+      "id": "743a",
+      "title": "Cat food ",
+      "image": "https://m.media-amazon.com/images/I/51N0EUgEVyL._SX300_SY300_QL70_FMwebp_.jpg",
+      "category": "Food",
+      "founder": "Divya Yadav / Thakur",
+      "quantity": 1,
+      "price": "50000"
+    },
+    {
+      "id": "db89",
+      "title": "Best Laptop",
+      "image": "https://m.media-amazon.com/images/I/31uLEZHhMDL._SX300_SY300_QL70_FMwebp_.jpg",
+      "founder": "Mehul bharti",
+      "quantity": 1,
+      "category": "Electronics",
+      "price": "1520"
+    },
+    {
+      "id": "c3b0",
+      "title": "Laptop",
+      "image": "https://m.media-amazon.com/images/I/41uN8gIf94L._SY300_SX300_QL70_FMwebp_.jpg",
+      "founder": "Yogesh Chaudhary",
+      "quantity": 1,
+      "category": "Electronics",
+      "price": "144"
+    },
+    {
+      "id": "3c2d",
+      "title": "Shoes Shop",
+      "image": "https://m.media-amazon.com/images/I/6181hUfP0uL._SY695_.jpg",
+      "category": "Shoes",
+      "founder": "Kritika Sharma",
+      "quantity": 1,
+      "price": "23650"
+    },
+    {
+      "title": "Milk Cake",
+      "image": "https://mylaporeganapathys.com/wp-content/uploads/2022/12/Ajmer-Cake-500x357.jpg",
+      "founder": "Kritika Sharma",
+      "quantity": 1,
+      "category": "Food",
+      "id": "9d93",
+      "price": "120"
+    },
+    {
+      "id": "13",
+      "title": "Falhari",
+      "image": "https://static.wixstatic.com/media/5f24cf_a17220104bb5486d943ad3acd5808e90~mv2.png/v1/fill/w_506,h_314,al_c,q_80,usm_0.66_1.00_0.01/5f24cf_a17220104bb5486d943ad3acd5808e90~mv2.png",
+      "founder": "Rahul Shankar Bhardwajsddf",
+      "quantity": 1,
+      "category": "Food",
+      "price": "26"
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYOkeAS5PgCBISOPRp_mZJuIxJ74IyCAlP_A&usqp=CAU",
+      "price": 50,
+      "percentage": 2,
+      "description": "We push our boundaries every day, we’re here to innovate and inspire a new generation of sustainable sanitation technology. PadCare isn’t a startup, it’s a revolution.",
+      "founder": "Ajinkya Dhariya",
+      "quantity": 1,
+      "category": "Electronics",
+      "year": "07-09-2022",
+      "title": "Padcare Lab",
+      "id": "15"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/617QlJ62nFL._AC_UL480_FMwebp_QL65_.jpg",
+      "price": "57",
+      "category": "sport",
+      "title": "Paradyes",
+      "id": "16",
+      "founder": "Yushika Jolly",
+      "quantity": 1
+    },
+    {
+      "image": "https://www.primebook.in/uploads/feature/1675677835_d887598e98a67da677f0.png",
+      "price": 75,
+      "percentage": 1.5,
+      "description": "Primebook 4G unites everything you need to elevate your learning. Meet the first Made In India 4G laptop, engineered with cutting-edge technology, based on the Android 11 Ecosystem, unlocking limitless learning opportunities.",
+      "founder": "Chitranshu Mahant",
+      "quantity": 1,
+      "category": "Tech",
+      "title": "Primebook",
+      "year": "14-02-2020",
+      "id": "21"
+    },
+    {
+      "id": "8477",
+      "title": "smart phone",
+      "image": "https://m.media-amazon.com/images/I/41tSQSq1xJL._SX300_SY300_QL70_FMwebp_.jpg",
+      "founder": "will smith",
+      "category": "Electronics",
+      "price": "13"
+    }
+  ],
+  "cartpage": [
+    {
+      "id": "16",
+      "image": "https://m.media-amazon.com/images/I/617QlJ62nFL._AC_UL480_FMwebp_QL65_.jpg",
+      "price": "57",
+      "category": "sport",
+      "title": "Paradyes",
+      "founder": "Yushika Jolly",
+      "quantity": 1
+    },
+    {
+      "id": "13",
+      "image": "https://static.wixstatic.com/media/5f24cf_a17220104bb5486d943ad3acd5808e90~mv2.png/v1/fill/w_506,h_314,al_c,q_80,usm_0.66_1.00_0.01/5f24cf_a17220104bb5486d943ad3acd5808e90~mv2.png",
+      "category": "Food",
+      "founder": "Rahul Shankar Bhardwaj",
+      "price": "260",
+      "title": "Falhari",
+      "quantity": 1
+    }
+  ]
+}

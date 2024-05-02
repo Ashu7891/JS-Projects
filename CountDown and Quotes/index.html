@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            background-color: #B99470;
+            height: 370px;
+            width: 400px;
+            text-align: center;
+            margin: auto;
+            padding: 30px 10px;
+            color: white;
+            border-radius: 10px;
+        }
+        .container .date-section{
+            margin-bottom: 10px;
+            width: 350px;
+            margin: auto;
+            text-align: left;
+        }
+        .container label{
+            display: block;
+            font-size: 20px;
+        }
+        .container input{
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+            margin: 5px 0px;
+            padding-left: 5px;
+        }
+        .container button{
+            margin-top: 20px;
+            padding: 5px 10px;
+            font-size: 17px;
+            background-color: rgb(51, 104, 96);
+            color: white;
+        }
+        .container .show-countdown{
+            font-size: 34px;
+            margin-top: 30px;
+            color: white;
+        }
+        .container .para-section{
+            font-size: 22px;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="date-section">
+            <div class="left">
+                <label for="">Enter Date with time:</label>
+                <input type="datetime-local" placeholder="dd" maxlength="2" id="day">
+            </div>
+            <button onclick="countDown()">Create CountDown</button>
+            <div class="show-countdown">
+                <p id="timer"></p>
+            </div>
+            <div class="para-section">
+                <p id="para"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function countDown(){
+        setInterval(() => {
+            let day = document.querySelector("#day").value
+            let newTime = new Date(day)
+            let currentDate = new Date()
+            let diffTime = newTime.getTime() - currentDate.getTime()
+            const days_data = Math.floor(diffTime / (1000 * 60 * 60 * 24));  
+            const hours_data = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));  
+            const minutes_data = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));  
+            const seconds_data = Math.floor((diffTime % (1000 * 60)) / 1000);  
+            timer.innerText = `${days_data} : ${hours_data} : ${minutes_data} : ${seconds_data}`;
+        });
+        let para = document.getElementById("para")
+        let arr=["Everything you've ever wanted is sitting on the other side of fear.","The question isn't who is going to let me; it's who is going to stop me.","Don't worry about failure; you only have to be right once.","I never dreamed about success. I worked for it.","Don’t let yesterday take up too much of today."]
+        let currentIndex = 0;
+        para.innerText = arr[currentIndex]
+        setInterval(() => {
+            currentIndex = (currentIndex+1)%arr.length;
+            para.innerText = arr[currentIndex]
+        }, 1000);
+            
+    }
+</script>
+</html>
